@@ -77,7 +77,7 @@ public class SauceDemo {
 		
 		File screenshot=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		
-		Files.copy(screenshot, new File("C:\\Users\\Babatransports\\Downloads\\Selenium Screenshots\\SauceDemo.jpeg"));
+		Files.copy(screenshot, new File("C:\\Users\\Praneshbala\\Downloads\\Selenium Screenshots\\SauceDemo.jpeg"));
 		
 		System.out.println("The Screenshot of order placed:" + screenshot);
 		
