@@ -6,7 +6,7 @@ public class FB_FORGET_PASSWORD_VALIDATION {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		System.setProperty("Webdriver.chrome.driver", "D:\\Selenium\\chromedriver_win32");
+		System.setProperty("Webdriver.chrome.driver", "D:\\Selenium\\chromedriver_win32\\chromedriver.exe");
 		
 		WebDriver driver=new ChromeDriver();
 		
