@@ -72,3 +72,10 @@ public class FB_FORGET_PASSWORD_VALIDATION {
 			System.out.println("we're in the wrong page");
 }
 }
+
+                String actualtitle=driver.getTitle();
+		
+		String expectedtitle="Forgotten Password | Can't Log In | Facebook";
+		
+		assertEquals(expectedtitle, actualtitle);
+		
