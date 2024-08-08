@@ -33,7 +33,7 @@ public class StaticDropDownDemo {
 		
 		Thread.sleep(3000L);
 		
-		driver.findElement(By.xpath("//button[value='submit']")).click();
+		driver.findElement(By.xpath("//button[@value='submit']")).click();
 		
 		Thread.sleep(3000L);
 		
