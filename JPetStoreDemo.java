@@ -48,14 +48,14 @@ public class JPetStoreDemo {
 		Thread.sleep(2000L);
 		
 		driver.findElement(By.name("updateCartQuantities")).click();
+
+	        File sch=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
 		
+		Files.copy(sch, new File("D:\\Selenium Screenshots\\Golden Retriever.png"));
+			
 		Thread.sleep(2000L);
 		
 		driver.findElement(By.linkText("Proceed to Checkout")).click();
-		
-		File sch=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		
-		Files.copy(sch, new File("D:\\Selenium Screenshots\\Dog.png"));
 		
 		driver.getTitle();
 		
