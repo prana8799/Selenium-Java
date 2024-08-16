@@ -27,9 +27,19 @@ public class HerokuDragAndDrop {
 		
 		Actions action=new Actions(driver);
 		
-		// action.dragAndDrop(source, target).build().perform();  -> Old Selenium Version
-
-		action.dragAndDrop(source, target).perform(); 
+//		action.dragAndDrop(source, target).build().perform(); 
+		
+		action.dragAndDrop(source, target).perform();
+		
+		driver.getCurrentUrl();
+		
+		System.out.println(driver.getCurrentUrl());
+		
+		if(driver.getCurrentUrl().contains("https://the-internet.herokuapp.com/drag_and_drop"))
+		{
+			System.out.println("Drag and Drop Action performed using Actions class");
+		}else
+			System.out.println("The Actions class failed");
 	}
 
 }
