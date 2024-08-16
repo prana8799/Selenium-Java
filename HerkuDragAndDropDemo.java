@@ -27,7 +27,9 @@ public class HerokuDragAndDrop {
 		
 		Actions action=new Actions(driver);
 		
-		action.dragAndDrop(source, target).build().perform();
+		// action.dragAndDrop(source, target).build().perform();  -> Old Selenium Version
+
+		action.dragAndDrop(source, target).perform(); 
 	}
 
 }
