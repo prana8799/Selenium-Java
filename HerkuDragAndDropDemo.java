@@ -25,11 +25,11 @@ public class HerokuDragAndDrop {
 		
 		WebElement target= driver.findElement(By.id("column-b"));
 		
-		Actions action=new Actions(driver);
+		Actions actions=new Actions(driver);
 		
-//		action.dragAndDrop(source, target).build().perform(); 
+//		actions.dragAndDrop(source, target).build().perform(); 
 		
-		action.dragAndDrop(source, target).perform();
+		actions.dragAndDrop(source, target).perform();
 		
 		driver.getCurrentUrl();
 		
