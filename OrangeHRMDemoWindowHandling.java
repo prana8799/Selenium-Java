@@ -88,7 +88,9 @@ public class OrangeHRMDemo {
 		
 		Thread.sleep(2000L);
 		
-		List<WebElement> countries=driver.findElements(By.xpath("//select[@name='Country']"));
+		driver.findElement(By.xpath("//select[@name='Country']")).sendKeys("ind");
+		
+		List<WebElement> countries=driver.findElements(By.xpath("//select[@tabindex='5']"));
 		
 		for(WebElement c:countries) {
 			c.getText().equalsIgnoreCase("India");
@@ -97,6 +99,8 @@ public class OrangeHRMDemo {
 		
 		
 			}
+		
+		
 			
 		
 		
