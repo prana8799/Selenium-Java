@@ -39,14 +39,6 @@ public class SauceDemoSelenium {
 		driver.findElement(By.id("login-button")).click();
 		
 		Thread.sleep(2000L);
-//		
-//		WebElement products=driver.findElement(By.xpath("//select[@class='product_sort_container']"));
-//		
-//		Select stt=new Select(products);
-//	
-//	stt.selectByIndex(2);
-//	
-//	Thread.sleep(2000L);
 		
 		driver.findElement(By.partialLinkText("Backpack")).click();
 		
@@ -90,7 +82,7 @@ public class SauceDemoSelenium {
 		
 		Files.copy(sch, new File("D:\\Selenium Screenshots\\checkout.jpeg"));
 		
-        driver.getCurrentUrl();
+                driver.getCurrentUrl();
 		
 		driver.getTitle();
 		
