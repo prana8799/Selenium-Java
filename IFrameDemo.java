@@ -24,7 +24,7 @@ public class IFrameDemo {
 		
 		ifr.click();
 		
-        driver.getCurrentUrl();
+                driver.getCurrentUrl();
 		
 		System.out.println(driver.getCurrentUrl());
 		
