@@ -3,6 +3,7 @@ package automation.selenium.java;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -30,8 +31,8 @@ public class PracticeSettings {
     public void setUp() {
 		System.setProperty("Webdriver.chrome.driver", "C:\\Selenium\\chromedriver-win64\\chromedriver.exe");
         driver = new ChromeDriver();
-        wait = new WebDriverWait(driver, Duration.ofSeconds(7));
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(8));
+        wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
         driver.manage().window().maximize();
     }
     @Test
@@ -186,14 +187,47 @@ WebElement friday=driver.findElement(By.xpath("//input[@value='28' and @type='ch
 	    	System.out.println("No Saturday");
 	    
 	    
-	    WebElement fetch=driver.findElement(By.xpath("//select[@data-fieldname=\"Appointment fetch timing\" and @id='setting_value_23_HHFROM']"));
+	    WebElement fetch=driver.findElement(By.xpath("(//select[@data-fieldname='Appointment fetch timing'])[1]"));
 	    
 	    Select fet=new Select(fetch);
 	    
 	    fet.getFirstSelectedOption();
 	    
 	    System.out.println(fet.getFirstSelectedOption().getText());
+	    	    
+	    WebElement sec=wait.until(ExpectedConditions.elementToBeClickable
+	    		(By.xpath("(//span[@class='select2-selection select2-selection--single']/span[@class='select2-selection__rendered'])[10]")));
 	    
+	    
+	    String s=sec.getText();
+	    
+	    System.out.println(s);
+	    
+	    WebElement l=wait.until(ExpectedConditions.elementToBeClickable
+   		(By.xpath("(//span[contains(@title, 'AM') or contains(@title, 'PM')])[1]")));
+	    
+    String ll=l.getText();
+    
+    System.out.println(ll);	    
+	    System.out.println("Appointment fetching time from:"+ " "+fet.getFirstSelectedOption().getText()+":"+ s + " "+ ll);
+	    
+	    
+	    
+ 
+//	    WebElement to=driver.findElement(By.xpath("//span[@id='select2-setting_value_23_HHTO-container']"));
+//	    
+//	    String t=to.getText();
+//	    
+//	    WebElement mi=driver.findElement(By.xpath("//span[@id='select2-setting_value_23_MMTO-container']"));
+//	    
+//	    String m=mi.getText();
+//	    
+//	    WebElement xi=driver.findElement(By.xpath("//span[@id=\"select2-setting_value_23_AMPMTO-container\"]"));
+//	    
+//	    String x=xi.getText();
+//	    
+//	    System.out.println("To:"+t+ " "+m+" "+x);
+//	    
 	   
 	    
 	    
